@@ -1,0 +1,7 @@
+# requirements.txt
+streamlit
+langchain
+langchain-google-genai
+langchain-mcp-adapters
+google-generativeai
+nest-asyncio
