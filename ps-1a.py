@@ -15,11 +15,11 @@ st.set_page_config(
 
 
 # Configure Gemini API
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyCox0TNVXJmV3gMfNPgMzItw1qzuFeaQr4")
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
 
-OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY", "6f67e9df796e5a8336f9f50fc19d872b")
+OPENWEATHER_API_KEY = st.secrets["OPENWEATHER_API_KEY"]
 
 class TripPlannerAgent:
     """LLM-powered trip planning agent using MCP architecture"""
@@ -561,3 +561,5 @@ HOTELS:
 
 if __name__ == "__main__":
     main()
+
+#push this into GitHub with commit message "Add AI Trip Planner Agent with enhanced features and expanded city support"
